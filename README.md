@@ -48,13 +48,21 @@ The dataset contains images in two categories:
 ---
 
 ## 🏗️ Project Structure
+## 🏗️ Project Structure
 
-├── dataset/ 
-├── data/ 
-│ ├── train/
-│ └── val/
-├── mask_detector.py 
-├── train_model.py 
-├── split_data.py 
-├── mask_detector_model.h5 
-├── readme.md 
+- `dataset/` – Original dataset downloaded from Kaggle
+  - `with_mask/`   
+  - `without_mask/` 
+- `data/` – Contains organized training and validation sets  
+  - `train/` – Training images for each class
+      - `with_mask/`   
+      - `without_mask/`
+  - `val/` – Validation images for each class
+      - `with_mask/`   
+      - `without_mask/`
+
+- `mask_detector.py` – Real-time mask detection script using webcam
+- `train_model.py` – Script for building and training the CNN model
+- `split_data.py` – Script to split dataset into train and validation folders
+- `mask_detector_model.h5` – Trained Keras model file
+- `readme.md` – This project documentation
